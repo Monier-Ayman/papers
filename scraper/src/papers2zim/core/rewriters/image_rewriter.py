@@ -13,6 +13,7 @@ from PIL.Image import open as pilopen
 from zimscraperlib.image.optimization import OptimizeWebpOptions
 
 from papers2zim.constants import logger
+from papers2zim.core import optimization_cache
 
 default_webp_options = asdict(OptimizeWebpOptions())
 
@@ -66,10 +67,26 @@ class ImageProcessor:
 
         When max_width is set, images wider than that are scaled down
         (never up) before conversion.
+
+        Results are cached by input content when a cache directory is
+        configured, so identical artwork is only encoded once per run of the
+        scraper against a given cache.
         """
-        dst = io.BytesIO()
-        with pilopen(io.BytesIO(file_content)) as image:
-            if max_width is not None and image.width > max_width:
-                image.thumbnail((max_width, image.height), Resampling.LANCZOS)
-            image.save(dst, format="WEBP", **default_webp_options)
-        return dst.getvalue()
+
+        def _convert() -> bytes:
+            dst = io.BytesIO()
+            with pilopen(io.BytesIO(file_content)) as image:
+                if max_width is not None and image.width > max_width:
+                    image.thumbnail((max_width, image.height), Resampling.LANCZOS)
+                image.save(dst, format="WEBP", **default_webp_options)
+            return dst.getvalue()
+
+        return optimization_cache.get_or_compute(
+            file_content,
+            {
+                "target": "webp",
+                "max_width": max_width,
+                "options": default_webp_options,
+            },
+            _convert,
+        )

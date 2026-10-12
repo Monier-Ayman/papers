@@ -17,6 +17,7 @@ as of 2.0.0.
 - Hide the "Collections" navigation item and homepage shelves when the ZIM only has a single collection (#3)
 - Revisit book grid for a better design and less rendering issues (#46)
 - Wikisource: select books by page name with `--wikisource-pages`, stable across feed updates unlike `--books` positions (#73)
+- Cache optimized EPUB and HTML images under an S3 bucket (`--optimization-cache`), keyed by the input image content so Project Gutenberg's frequent file rebuilds no longer defeat the cache (#32)
 
 ### Changed
 

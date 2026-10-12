@@ -16,6 +16,7 @@ from pathlib import Path
 from zimscraperlib.image.optimization import optimize_jpeg, optimize_png
 
 from papers2zim.constants import logger
+from papers2zim.core import optimization_cache
 
 DocumentTransform = Callable[[str, bytes], bytes]
 
@@ -119,9 +120,16 @@ def _optimize_member(
 
 
 def _run_image_optimizer(optimizer: Callable[..., None], data: bytes) -> bytes:
-    destination = io.BytesIO()
-    optimizer(src=io.BytesIO(data), dst=destination)
-    return destination.getvalue()
+    def _convert() -> bytes:
+        destination = io.BytesIO()
+        optimizer(src=io.BytesIO(data), dst=destination)
+        return destination.getvalue()
+
+    return optimization_cache.get_or_compute(
+        data,
+        {"target": "epub-member", "optimizer": optimizer.__name__},
+        _convert,
+    )
 
 
 def _log_size_change(

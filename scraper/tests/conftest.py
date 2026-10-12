@@ -5,7 +5,16 @@ from unittest.mock import MagicMock
 import pytest
 from PIL import Image
 
+from papers2zim.core import optimization_cache
 from papers2zim.core.models import CollectionRef, Cover, Creator, Work
+
+
+@pytest.fixture(autouse=True)
+def _reset_optimization_cache():
+    """Keep the process-wide optimization cache from leaking between tests."""
+    optimization_cache.configure(None)
+    yield
+    optimization_cache.configure(None)
 
 
 @pytest.fixture
