@@ -1,11 +1,22 @@
 {
 	"@metadata": {
 		"authors": [
+			"Abijeet Patro",
 			"Saurmandal"
 		]
 	},
 	"language": "हिन्दी",
+	"isocode": "hi",
 	"common": {
+		"nav": {
+			"home": "घर",
+			"authors": "लेखक",
+			"about": "विवरण",
+			"books": "पुस्तकें"
+		},
+		"home": {
+			"allAuthors": "सभी लेखकों"
+		},
 		"book": {
 			"anonymous": "अनाम"
 		},

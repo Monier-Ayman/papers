@@ -24,6 +24,7 @@
 			"title": "Titolo",
 			"languages": "Linguaggio",
 			"collection": "Raccolta",
+			"published": "Pubblicato",
 			"license": "Licenza",
 			"licensePd": "Di pubblico dominio negli USA.",
 			"worksAvailable": "Opere disponibili",
@@ -33,6 +34,29 @@
 			"anonymous": "Anonimo",
 			"various": "Vari",
 			"download": "Scarica"
+		},
+		"author": {
+			"wikipediaSource": "Fonte: Wikipedia"
+		},
+		"zimInfo": {
+			"trigger": "Informazioni su questo ZIM",
+			"title": "Informazioni su questo ZIM",
+			"collections": {
+				"one": "Raccolta",
+				"other": "Raccolte"
+			},
+			"books": {
+				"one": "Libro",
+				"other": "Libri"
+			},
+			"language": {
+				"one": "Lingua",
+				"other": "Lingue"
+			},
+			"formats": {
+				"one": "Formato",
+				"other": "Formati"
+			}
 		},
 		"reader": {
 			"previousSection": "Sezione precedente"
@@ -63,6 +87,7 @@
 			"navigateTo": "Vai a",
 			"navigateToItem": "Vai a {item}",
 			"close": "Chiudi",
+			"all": "Tutto",
 			"next": "Successivo",
 			"previous": "Precedente",
 			"readMore": "Per saperne di più",
@@ -127,6 +152,11 @@
 			"8": "Scienze naturali",
 			"26": "Istruzione - Istruzione elementare",
 			"27": "Istruzione - Istruzione superiore"
+		}
+	},
+	"wikisource": {
+		"about": {
+			"missionHeading": "La nostra missione"
 		}
 	}
 }

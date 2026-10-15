@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pratik11"
+			"Pratik11",
+			"बडा काजी"
 		]
 	},
 	"common": {
@@ -28,7 +29,7 @@
 			"showLess": "कम देखाउनुहोस्"
 		},
 		"messages": {
-			"noAuthorsForLetter": "अक्षर {अक्षर} को लागि कुनै लेखक फेला परेनन्।"
+			"noAuthorsForLetter": "अक्षर {letter} को लागि कुनै लेखक फेला परेनन्।"
 		}
 	},
 	"gutenberg": {
@@ -68,6 +69,30 @@
 		},
 		"book": {
 			"sameCollectionBooks": "एउटै शेल्फमा किताबहरू"
+		}
+	},
+	"wikisource": {
+		"about": {
+			"attribution": "विकिस्रोत, निःशुल्क पुस्तकालयद्वारा प्रदान गरिएको पाठ।",
+			"introParagraph1": "विकिस्रोत स्रोत पाठहरूको नि:शुल्क अनलाइन पुस्तकालय हो जसलाई जो कोहीले पनि सुधार गर्न सक्छन्।"
+		},
+		"nav": {
+			"collections": "सङ्ग्रहहरू"
+		},
+		"home": {
+			"allCollections": "सबै सङ्ग्रहहरू",
+			"popularCollections": "लोकप्रिय सङ्ग्रहहरू"
+		},
+		"collection": {
+			"allCollections": "सबै सङ्ग्रहहरू"
+		},
+		"book": {
+			"collection": "सङ्ग्रह",
+			"sameCollectionBooks": "एउटै सङ्ग्रहमा रहेका पुस्तकहरू"
+		},
+		"footer": {
+			"createdBy": "निर्माणकर्ता",
+			"kiwix": "किविक्स"
 		}
 	}
 }
