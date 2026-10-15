@@ -54,7 +54,7 @@ describe('CollectionCard', () => {
 
       const span = avatar.find('span')
       expect(span.text()).toBe('PR')
-      expect(span.classes()).toContain('text-h4')
+      expect(span.classes()).toContain('text-headline-large')
       expect(span.classes()).toContain('font-weight-bold')
     })
   })

@@ -7,6 +7,6 @@ defineProps<{
 <template>
   <div class="text-center">
     <v-progress-circular indeterminate color="primary" size="64" />
-    <p class="mt-4 text-body-1">{{ message }}</p>
+    <p class="mt-4 text-body-large">{{ message }}</p>
   </div>
 </template>

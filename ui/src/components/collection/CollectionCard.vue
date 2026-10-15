@@ -17,14 +17,14 @@ defineProps<{
   >
     <v-card-text class="text-center pa-6">
       <v-avatar :size="80" color="primary" class="mb-4">
-        <span class="text-h4 font-weight-bold">{{ collection.id }}</span>
+        <span class="text-headline-large font-weight-bold">{{ collection.id }}</span>
       </v-avatar>
 
-      <v-card-title v-if="collection.name" class="text-body-1 text-wrap">
+      <v-card-title v-if="collection.name" class="text-body-large text-wrap">
         {{ collection.name }}
       </v-card-title>
 
-      <v-card-subtitle class="text-caption mt-2">
+      <v-card-subtitle class="text-body-small mt-2">
         {{ collection.bookCount }} {{ pluralize(collection.bookCount, 'book') }}
       </v-card-subtitle>
     </v-card-text>

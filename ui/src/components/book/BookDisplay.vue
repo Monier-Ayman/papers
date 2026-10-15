@@ -49,7 +49,7 @@ function onDisplayedCount(count: number) {
     <books-grid v-if="isGridView" :books="displayedBooks" :columns="columns" :variant="variant" />
     <books-list v-else :books="displayedBooks" @update:displayed-count="onDisplayedCount" />
 
-    <div v-if="infiniteHasMore" ref="sentinelRef" class="text-caption text-center py-4">
+    <div v-if="infiniteHasMore" ref="sentinelRef" class="text-body-small text-center py-4">
       {{ $t('common.loading') }}
     </div>
   </div>

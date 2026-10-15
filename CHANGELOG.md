@@ -21,6 +21,7 @@ as of 2.0.0.
 
 ### Changed
 
+- UI: upgrade to Vuetify 4, migrating to the Material Design 3 typography classes, grid alignment utility classes, and restoring the CSS reset the new version dropped (#26)
 - UI: replace book grid borders with rounded card backgrounds, highlighted on hover, in book grid, book list, book carousel and author carousel
 - Gutenberg: replace `--with-author-details` with `--with-author-bio` and `--with-author-portrait` (#66)
 - Author details: fetch biographies and portraits in the language the ZIM is built in, resolved through Wikipedia's interlanguage links, and keep the English picture when the localized article has none (#65)

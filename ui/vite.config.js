@@ -47,6 +47,15 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src', import.meta.url))
         }
     },
+    optimizeDeps: {
+        include: [
+            'vuetify/components/VOverlay',
+            'vuetify/components/VDialog',
+            'vuetify/components/VMenu',
+            'vuetify/components/VSelect',
+            'vuetify/components/VTooltip'
+        ]
+    },
     build: {
         outDir: '../scraper/src/papers2zim/zimui',
         emptyOutDir: true,

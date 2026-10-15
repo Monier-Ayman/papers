@@ -46,7 +46,7 @@ describe('LoadingSpinner', () => {
       const message = wrapper.find('p')
       expect(message.exists()).toBe(true)
       expect(message.classes()).toContain('mt-4')
-      expect(message.classes()).toContain('text-body-1')
+      expect(message.classes()).toContain('text-body-large')
     })
   })
 })

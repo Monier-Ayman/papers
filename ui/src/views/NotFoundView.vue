@@ -5,7 +5,7 @@ import { LAYOUT } from '@/constants/theme'
 <template>
   <div class="not-found-view">
     <v-container>
-      <v-row justify="center">
+      <v-row class="justify-center">
         <v-col cols="12" md="8">
           <v-card>
             <v-card-title>Page Not Found</v-card-title>
