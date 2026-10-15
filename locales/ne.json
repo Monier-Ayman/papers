@@ -29,7 +29,7 @@
 			"showLess": "कम देखाउनुहोस्"
 		},
 		"messages": {
-			"noAuthorsForLetter": "अक्षर {अक्षर} को लागि कुनै लेखक फेला परेनन्।"
+			"noAuthorsForLetter": "अक्षर {letter} को लागि कुनै लेखक फेला परेनन्।"
 		}
 	},
 	"gutenberg": {

@@ -23,7 +23,8 @@
 		"zimInfo": {
 			"source": "ماخذ",
 			"collections": {
-				"one": "مجموعہ"
+				"one": "مجموعہ",
+				"other": "مجموعے"
 			},
 			"books": {
 				"one": "کتاب",
@@ -34,7 +35,8 @@
 				"other": "زباناں"
 			},
 			"formats": {
-				"one": "فارمیٹ"
+				"one": "فارمیٹ",
+				"other": "فارمیٹ"
 			}
 		},
 		"common": {
