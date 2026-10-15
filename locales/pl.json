@@ -50,5 +50,13 @@
 			"PT": "Literatura niemiecka, niderlandzka, flamandzka, afrikaans, skandynawska, staronordycka, staroislandzka, staronorweska, współczesna islandzka, farerska, duńska, norweska i szwedzka",
 			"PZ": "Literatura piękna i młodzieżowa"
 		}
+	},
+	"wikisource": {
+		"about": {
+			"introHeading": "O Wikiźródłach"
+		},
+		"metadata_defaults": {
+			"title": "Biblioteka Wikiźródeł"
+		}
 	}
 }

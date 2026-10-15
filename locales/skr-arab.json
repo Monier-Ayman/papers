@@ -14,15 +14,38 @@
 		"book": {
 			"title": "کتاباں",
 			"languages": "زبان(اں)",
+			"published": "شائع تھی ڳئے",
 			"anonymous": "گمنام"
+		},
+		"author": {
+			"about": "تعارف"
+		},
+		"zimInfo": {
+			"source": "ماخذ",
+			"collections": {
+				"one": "مجموعہ"
+			},
+			"books": {
+				"one": "کتاب",
+				"other": "کتاباں"
+			},
+			"language": {
+				"one": "زبان",
+				"other": "زباناں"
+			},
+			"formats": {
+				"one": "فارمیٹ"
+			}
 		},
 		"common": {
 			"sortTitle": "عنوان",
-			"listView": "تندیر نظارہ"
+			"listView": "تندیر نظارہ",
+			"all": "یکے"
 		}
 	},
 	"gutenberg": {
 		"collections": {
+			"CDEF": "تاریخ",
 			"K": "قنون",
 			"T": "ٹیکنالوجی"
 		}

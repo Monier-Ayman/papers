@@ -117,5 +117,13 @@
 			"PT": "Däitsch, hollännesch, flämesch, Afrikaans-, skandinavesch, alnordesch, alislännesch, alnorwegesch, modern islännesch, färöesch, dänesch, norwegesch a schweedesch Literatur",
 			"PZ": "Fiktioun a Jugendbelletristik"
 		}
+	},
+	"wikisource": {
+		"about": {
+			"introHeading": "Iwwer Wikisource"
+		},
+		"footer": {
+			"kiwix": "Kiwix"
+		}
 	}
 }
