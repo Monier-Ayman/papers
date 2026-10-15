@@ -17,7 +17,7 @@ from typing import Any, cast
 
 from papers2zim.config import ScrapeConfig
 from papers2zim.constants import logger
-from papers2zim.core import i18n
+from papers2zim.core import i18n, optimization_cache
 from papers2zim.core.download_engine import DownloadEngine
 from papers2zim.core.exporters.ui_dist_exporter import export_ui_dist
 from papers2zim.core.language import (
@@ -43,6 +43,12 @@ def run_scrape(config: ScrapeConfig) -> None:
     if config.debug:
         for handler in logger.handlers:
             handler.setLevel(logging.DEBUG)
+
+    optimization_cache.configure(
+        optimization_cache.open_s3_store(config.optimization_cache_url)
+        if config.optimization_cache_url
+        else None
+    )
 
     profile = get_source(config.source)
     i18n.setup_i18n(profile.locale_namespace)

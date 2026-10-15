@@ -45,6 +45,7 @@ Options:
   --mirror-url=<mirror_url>       Source mirror URL
   --output=<output_folder>        Output directory [default: ./output]
   --cache-dir=<cache_folder>      Persist caches here; pass again to reuse them
+  --optimization-cache=<url>      S3 URL with credentials to reuse optimized assets
   --ui-dist=<ui_dist>             Vue UI distribution directory
   --debug                         Enable verbose output
 """

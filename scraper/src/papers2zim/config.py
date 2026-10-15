@@ -22,6 +22,7 @@ class ScrapeConfig:
     mirror_url: str
     output_folder: Path
     cache_dir: Path | None = None
+    optimization_cache_url: str | None = None
     concurrency: int = 16
     formats: list[str] = field(default_factory=lambda: ["epub", "pdf", "html"])
     books: list[str] | None = None
@@ -105,6 +106,7 @@ def build_scrape_config(arguments: dict) -> ScrapeConfig:
             cache_dir.mkdir(parents=True, exist_ok=True)
         except OSError as exc:
             critical_error(f"Unable to create --cache-dir {cache_dir}: {exc}")
+    optimization_cache_url: str | None = arguments.get("--optimization-cache") or None
     default_ui_dist = Path(__file__).parent / "zimui"
     ui_dist_raw = (
         arguments.get("--ui-dist")
@@ -167,6 +169,7 @@ def build_scrape_config(arguments: dict) -> ScrapeConfig:
         mirror_url=mirror_url,
         output_folder=output_folder,
         cache_dir=cache_dir,
+        optimization_cache_url=optimization_cache_url,
         concurrency=concurrency,
         formats=formats,
         books=books or None,

@@ -195,6 +195,13 @@
       "description": "Output folder for ZIM file(s). Leave it as `/output`",
       "pattern": "^/output$"
     },
+    "optimization_cache": {
+      "type": "url",
+      "required": false,
+      "title": "Optimization Cache URL",
+      "description": "URL with credentials and bucket name to S3 Optimization Cache",
+      "secret": true
+    },
     "mirror_url": {
       "type": "string",
       "required": false,

@@ -108,3 +108,15 @@ def test_with_author_bio_and_portrait_are_pg_only_boolean_flags():
         if choice["value"] != "gutenberg":
             assert "with_author_bio" not in choice["dependents"]
             assert "with_author_portrait" not in choice["dependents"]
+
+
+def test_recipe_exposes_optimization_cache():
+    definition = json.loads(DEFINITION_PATH.read_text(encoding="utf-8"))
+
+    assert definition["flags"]["optimization_cache"] == {
+        "type": "url",
+        "required": False,
+        "title": "Optimization Cache URL",
+        "description": "URL with credentials and bucket name to S3 Optimization Cache",
+        "secret": True,
+    }
