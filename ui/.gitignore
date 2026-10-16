@@ -26,6 +26,9 @@ dist-ssr
 # TypeScript
 *.tsbuildinfo
 *.d.ts
+# tsc would emit these next to the *.config.ts when `noEmit` is not honored
+/vite.config.js
+/vitest.config.js
 
 # Generated files
 src/generated/
