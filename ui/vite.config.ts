@@ -54,6 +54,14 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  // Vuetify 4 derives overlay z-index from a shared useStack singleton. In dev, Vite's
+  // dependency pre-bundler can serve some Vuetify modules from its optimized cache and
+  // others as raw ESM, creating two useStack instances; overlays opened inside a dialog
+  // (menus, selects, tooltips) then stay at the default z-index and render behind it.
+  // Pre-bundling the components that take part in stacking keeps a single instance.
+  // This is the workaround documented in the Vuetify 4 upgrade guide and only affects
+  // dev mode: production builds bundle a single module graph and are not concerned.
+  // https://vuetifyjs.com/getting-started/upgrade-guide/#vite-overlay-z-index-in-dev-mode
   optimizeDeps: {
     include: [
       'vuetify/components/VOverlay',
