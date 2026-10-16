@@ -68,7 +68,7 @@ onMounted(() => {
       <alphabet-filter v-model="activeFilter" />
 
       <authors-list v-if="filteredByLetter.length > 0" :authors="filteredByLetter" />
-      <p v-else class="text-body-1 text-medium-emphasis text-center py-8">
+      <p v-else class="text-body-large text-medium-emphasis text-center py-8">
         {{ t('messages.noAuthorsForLetter', { letter: activeFilter }) }}
       </p>
     </template>

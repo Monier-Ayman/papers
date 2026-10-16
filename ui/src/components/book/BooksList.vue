@@ -41,7 +41,7 @@ const { sentinelRef } = useIntersectionObserver(() => {
     <div v-for="book in displayedItems" :key="book.id" class="list-cell">
       <list-book-card :book="book" />
     </div>
-    <div ref="sentinelRef" class="sentinel text-caption text-center py-4">
+    <div ref="sentinelRef" class="sentinel text-body-small text-center py-4">
       <span v-if="hasMore">{{ t('common.loading') }}</span>
     </div>
   </div>
