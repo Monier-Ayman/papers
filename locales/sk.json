@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"KormiSK",
 			"Wizzard"
 		]
 	},
@@ -39,7 +40,22 @@
 		},
 		"author": {
 			"bookCount": "{n} kniha | {n} kníh",
-			"viewAuthor": "Zobraziť autora: {name} ({bookCount})"
+			"viewAuthor": "Zobraziť autora: {name} ({bookCount})",
+			"about": "O autorovi",
+			"wikipediaSource": "Zdroj: Wikipédia"
+		},
+		"zimInfo": {
+			"source": "Zdroj",
+			"collections": {
+				"one": "Zbierka",
+				"other": "Zbierky"
+			},
+			"books": {
+				"one": "Kniha"
+			},
+			"formats": {
+				"other": "Formáty"
+			}
 		},
 		"common": {
 			"loading": "Načítava sa...",
@@ -72,6 +88,7 @@
 			"navigateTo": "Prejsť na",
 			"navigateToItem": "Prejsť na {item}",
 			"close": "Zavrieť",
+			"all": "Všetko",
 			"next": "Ďalej",
 			"previous": "Predchádzajúce",
 			"readMore": "Čítať viac",
@@ -150,6 +167,7 @@
 		"collections": {
 			"A": "Všeobecné diela",
 			"B": "Filozofia, psychológia, náboženstvo",
+			"CDEF": "História",
 			"C": "Pomocné vedy historické",
 			"D": "Svetové dejiny a dejiny Európy, Ázie, Afriky, Austrálie, Nového Zélandu atď.",
 			"E": "Dejiny Ameriky",

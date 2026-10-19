@@ -27,7 +27,30 @@
 			"view": "Weisen"
 		},
 		"author": {
-			"bookCount": "{n} Buch | {n} Bicher"
+			"bookCount": "{n} Buch | {n} Bicher",
+			"about": "Iwwer",
+			"wikipediaSource": "Source: Wikipedia"
+		},
+		"zimInfo": {
+			"trigger": "Informatiounen iwwer dëse ZIM",
+			"title": "Informatiounen iwwer dëse ZIM",
+			"books": {
+				"one": "Buch",
+				"other": "Bicher"
+			},
+			"language": {
+				"one": "Sprooch",
+				"other": "Sproochen"
+			},
+			"formats": {
+				"one": "Format",
+				"other": "Formater"
+			}
+		},
+		"reader": {
+			"closeTableOfContents": "Inhaltsverzeechnes zoumaachen",
+			"tableOfContents": "Inhaltsverzeechnes",
+			"toggleTableOfContents": "Inhaltsverzeechnes ëmschalten"
 		},
 		"common": {
 			"loading": "Gëtt gelueden...",
@@ -120,7 +143,9 @@
 	},
 	"wikisource": {
 		"about": {
-			"introHeading": "Iwwer Wikisource"
+			"introHeading": "Iwwer Wikisource",
+			"missionAuthor": "D'Wikisource-Communautéit",
+			"missionHeading": "Eis Missioun"
 		},
 		"footer": {
 			"kiwix": "Kiwix"
