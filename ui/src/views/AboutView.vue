@@ -72,6 +72,7 @@ const missionParagraphs = computed(() => paragraphKeys('about.mission'))
   width: 100%;
   margin: calc(-100dvh + 2.5rem) auto 0;
   padding: 3rem 4rem;
+  border-radius: 8px;
 }
 
 /* Keep the text column at its original width (760px card minus 4rem

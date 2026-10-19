@@ -11,7 +11,7 @@ async function loadVuetify() {
   const INFO = '#1976D2'
   const SUCCESS = '#388E3C'
   const WARNING = '#F57C00'
-  const BACKGROUND_LIGHT = '#FBF9F9'
+  const BACKGROUND_LIGHT = '#F2F0F0'
   const BACKGROUND_DARK = '#121212'
   const SURFACE_LIGHT = '#FAFAFA'
   const SURFACE_DARK = '#1E1E1E'
@@ -33,6 +33,7 @@ async function loadVuetify() {
     focusBook: THEME_COLORS.FOCUS_BOOK,
     menuActive: THEME_COLORS.MENU_ACTIVE,
     collectionIcon: THEME_COLORS.COLLECTION_ICON,
+    collectionIconHover: THEME_COLORS.COLLECTION_ICON_HOVER,
     authorAvatarBgd: THEME_COLORS.AUTHOR_AVATAR_BGD,
     bgd1: THEME_COLORS.BGD_1,
     bgd2: THEME_COLORS.BGD_2,
@@ -65,6 +66,7 @@ async function loadVuetify() {
     bgd3Outline: THEME_COLORS.BGD_3_OUTLINE_DARK,
     focusBook: THEME_COLORS.FOCUS_BOOK_DARK,
     collectionIcon: THEME_COLORS.COLLECTION_ICON_DARK,
+    collectionIconHover: THEME_COLORS.COLLECTION_ICON_HOVER_DARK,
     authorAvatarBgd: THEME_COLORS.AUTHOR_AVATAR_BGD_DARK,
     cardBgd: THEME_COLORS.CARD_BGD_DARK,
     cardBgdHover: THEME_COLORS.CARD_BGD_HOVER_DARK,
