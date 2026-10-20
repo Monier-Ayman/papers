@@ -208,9 +208,8 @@ function handleSelect(id: string) {
   max-width: 100%;
 }
 
-.popular-collections-bar__collection-btn:hover .popular-collections-bar__collection-name {
-  text-decoration: underline;
-  text-underline-offset: 3px;
+.popular-collections-bar__collection-btn:hover {
+  background-color: rgb(var(--v-theme-collectionIconHover));
 }
 
 @media (max-width: 767px) {

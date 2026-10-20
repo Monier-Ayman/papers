@@ -175,7 +175,7 @@ onMounted(() => {
 }
 
 .collection-books {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 
 .selected-authors-carousel,

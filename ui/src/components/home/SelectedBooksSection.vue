@@ -132,7 +132,7 @@ function goToAuthor(id: string) {
 
 .selected-books-section__featured-inner {
   padding: 3rem;
-  background-color: v-bind(THEME_COLORS.FOCUS_BOOK);
+  background-color: rgb(var(--v-theme-focusBook));
   color: #ffffff;
   border-radius: 10px;
 }
@@ -153,7 +153,7 @@ function goToAuthor(id: string) {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1.05rem;
+  margin-bottom: 0.6rem;
   width: 100%;
   aspect-ratio: 2 / 3;
   max-height: 450px;

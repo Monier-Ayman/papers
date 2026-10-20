@@ -13,7 +13,7 @@ const ZIM_INFO_TEXT_LIGHT = '#38495c'
 const ZIM_INFO_BGD_DARK = '#38495c'
 const ZIM_INFO_TEXT_DARK = '#ffffff'
 const ZIM_INFO_SCRIM = '#3c485a'
-const ZIM_INFO_SCRIM_DARK = '#b4b9bd'
+const ZIM_INFO_SCRIM_DARK = '#121d28'
 
 const props = defineProps<{
   modelValue: boolean
@@ -224,6 +224,6 @@ const dateScrapedValue = computed(() => {
 }
 
 :deep(.v-overlay__scrim) {
-  opacity: 0.6 !important;
+  opacity: 0.8 !important;
 }
 </style>

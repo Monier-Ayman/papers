@@ -99,8 +99,6 @@ const { t } = useI18n()
 
 .author-card--boxed.author-card__navigate:hover,
 .author-card--boxed.author-card__navigate:focus-visible {
-  background-color: rgb(var(--v-theme-cardBgdHover));
-  border-color: rgb(var(--v-theme-cardBorderHover));
   box-shadow: 0 0 10px 0 rgb(var(--v-theme-grid));
 }
 
@@ -137,15 +135,6 @@ const { t } = useI18n()
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
-}
-
-.author-card__navigate:hover .author-card__avatar,
-.author-card__navigate:focus .author-card__avatar {
-  transform: scale(1.05);
-  box-shadow:
-    0 0 12px rgba(var(--v-theme-text), 0.15),
-    0 0 24px rgba(var(--v-theme-text), 0.1),
-    0 0 36px rgba(var(--v-theme-text), 0.05);
 }
 
 .author-card__name {
