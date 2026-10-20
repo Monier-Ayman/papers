@@ -42,7 +42,6 @@
     "author": {
       "bookCount": "{n} book | {n} books",
       "viewAuthor": "View author: {name} ({bookCount})",
-      "about": "About",
       "wikipediaSource": "Source: Wikipedia"
     },
     "collection": {

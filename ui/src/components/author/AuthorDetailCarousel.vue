@@ -64,11 +64,13 @@ watch(
   async () => {
     await nextTick()
     if (trackRef.value) {
-      const currentCell =
-        (trackRef.value.querySelector('.carousel-cell--current') as HTMLElement) ||
-        (trackRef.value.querySelector('.carousel-cell--hidden-current') as HTMLElement)
+      const currentCell = trackRef.value.querySelector('.carousel-cell--current') as HTMLElement
       if (currentCell) {
-        trackRef.value.scrollTo({ left: currentCell.offsetLeft })
+        if (mobile.value) {
+          trackRef.value.scrollTo({ left: currentCell.offsetLeft })
+        } else {
+          trackRef.value.scrollTo({ left: currentCell.offsetLeft - currentCell.clientWidth * 2 })
+        }
         updateScrollState()
       }
     }
@@ -89,37 +91,19 @@ watch(
     </div>
 
     <div class="carousel-track-wrapper">
-      <div v-if="!mobile" class="carousel-cell carousel-cell--current">
-        <author-card
-          :author="currentAuthor"
-          variant="comfortable"
-          boxed
-          selected
-          :navigate="false"
-        />
-      </div>
       <div ref="trackRef" class="carousel-track" @scroll.passive="updateScrollState">
         <template v-for="author in sortedAuthors" :key="author.id">
           <div
-            v-if="mobile || author.id != currentAuthor.id"
             class="carousel-cell"
-            :class="{
-              'carousel-cell--current': author.id === currentAuthor.id,
-              'carousel-cell--others': author.id !== currentAuthor.id
-            }"
+            :class="{ 'carousel-cell--current': author.id === currentAuthor.id }"
           >
             <author-card
               :author="author"
-              :variant="mobile ? 'comfortable' : 'compact'"
-              :navigate="author.id != currentAuthor.id"
+              :variant="mobile ? 'row' : 'mini'"
+              :navigate="author.id !== currentAuthor.id"
               :selected="author.id === currentAuthor.id"
-              boxed
             />
           </div>
-          <div
-            v-else-if="!mobile && author.id == currentAuthor.id"
-            class="carousel-cell carousel-cell--hidden-current"
-          ></div>
         </template>
       </div>
     </div>
@@ -178,24 +162,7 @@ watch(
      including the arrow buttons. */
   scroll-snap-align: start;
   display: flex;
-}
-
-.carousel-cell--current {
-  flex: 0 0 40%;
-}
-
-.carousel-cell--others {
-  flex: 0 0 33.333%;
-}
-
-@media (max-width: 1200px) {
-  .carousel-cell--current {
-    flex: 0 0 50%;
-  }
-
-  .carousel-cell--others {
-    flex: 0 0 50%;
-  }
+  flex: 0 0 20%;
 }
 
 @media (max-width: 767px) {

@@ -4,6 +4,7 @@ import type { AuthorPreview, AuthorDetail, BookPreview } from '@/types'
 import BookDisplay from '@/components/book/BookDisplay.vue'
 import EmptyState from '@/components/common/EmptyState.vue'
 import AuthorDetailCarousel from './AuthorDetailCarousel.vue'
+import AuthorDetailsBox from './AuthorDetailsBox.vue'
 
 const props = defineProps<{
   author: AuthorDetail
@@ -15,29 +16,15 @@ const books = toRef(() => props.author.books as BookPreview[])
 
 <template>
   <div>
-    <author-detail-carousel :authors="authors" :current-author="author" />
-
-    <section v-if="author.bio" class="author-about">
-      <div class="author-about__content">
-        <h3 class="author-about__title">{{ $t('author.about') }}</h3>
-        <p v-if="author.bio" class="author-about__bio">{{ author.bio }}</p>
-        <a
-          v-if="author.webpageResource"
-          class="author-about__source"
-          :href="author.webpageResource"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ $t('author.wikipediaSource') }}
-        </a>
-      </div>
-    </section>
+    <author-details-box :authors="authors" :current-author="author" />
 
     <div v-if="books.length > 0" class="author-books">
       <book-display :books="books" :columns="5" type="books" />
     </div>
 
     <empty-state v-else :message="$t('messages.noBooksForAuthor')" />
+
+    <author-detail-carousel :authors="authors" :current-author="author" />
   </div>
 </template>
 

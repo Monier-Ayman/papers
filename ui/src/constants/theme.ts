@@ -52,15 +52,17 @@ export const LAYOUT = {
 } as const
 
 export const AVATAR_SIZES = {
-  COMPACT: 48,
-  COMFORTABLE: 100,
-  FULL: 160
+  SMALL: 48,
+  MEDIUM: 72,
+  LARGE: 100,
+  XLARGE: 160
 } as const
 
 export const ICON_SIZES = {
-  COMPACT: 28,
-  COMFORTABLE: 80,
-  FULL: 100
+  SMALL: 28,
+  MEDIUM: 56,
+  LARGE: 80,
+  XLARGE: 100
 } as const
 
 export const BOOK_GRID = {
