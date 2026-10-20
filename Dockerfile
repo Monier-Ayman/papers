@@ -14,6 +14,7 @@ LABEL org.opencontainers.image.source="https://github.com/openzim/papers"
 # Install necessary packages
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
+      ca-certificates \
       locales \
  && rm -rf /var/lib/apt/lists/* \
  && python -m pip install --no-cache-dir -U \
@@ -48,6 +49,7 @@ WORKDIR /output
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \
     LC_ALL=en_US.UTF-8 \
-    ZIM_OUTPUT=/output
+    ZIM_OUTPUT=/output \
+    REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 CMD ["papers2zim", "--help"]
