@@ -41,7 +41,6 @@
 		"author": {
 			"bookCount": "{n} kniha | {n} kníh",
 			"viewAuthor": "Zobraziť autora: {name} ({bookCount})",
-			"about": "O autorovi",
 			"wikipediaSource": "Zdroj: Wikipédia"
 		},
 		"zimInfo": {
@@ -51,9 +50,11 @@
 				"other": "Zbierky"
 			},
 			"books": {
-				"one": "Kniha"
+				"one": "Kniha",
+				"other": "Knihy"
 			},
 			"formats": {
+				"one": "Formát",
 				"other": "Formáty"
 			}
 		},

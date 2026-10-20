@@ -35,7 +35,6 @@
 			"sameCollectionBooks": "Aynı koleksiyondaki kitaplar"
 		},
 		"author": {
-			"about": "Hakkında",
 			"wikipediaSource": "Kaynak: Vikipedi"
 		},
 		"collection": {
@@ -46,7 +45,8 @@
 			"title": "Bu ZIM hakkında bilgi",
 			"source": "Kaynak",
 			"collections": {
-				"one": "Koleksiyon"
+				"one": "Koleksiyon",
+				"other": "Koleksiyonlar"
 			},
 			"books": {
 				"one": "Kitap",
