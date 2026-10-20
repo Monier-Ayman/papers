@@ -110,7 +110,7 @@ const arrows = [
                   <author-avatar
                     :portrait-path="author.portraitPath"
                     :name="author.name"
-                    variant="comfortable"
+                    size="large"
                     class="selected-author-card__avatar"
                   />
                 </div>

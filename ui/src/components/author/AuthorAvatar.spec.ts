@@ -53,12 +53,13 @@ describe('AuthorAvatar', () => {
   })
 
   it.each([
-    { variant: 'compact', avatar: 48, icon: 28 },
-    { variant: 'comfortable', avatar: 100, icon: 80 },
-    { variant: 'full', avatar: 160, icon: 100 }
-  ])('maps variant $variant to the right avatar/icon sizes', ({ variant, avatar, icon }) => {
+    { size: 'small', avatar: 48, icon: 28 },
+    { size: 'medium', avatar: 72, icon: 56 },
+    { size: 'large', avatar: 100, icon: 80 },
+    { size: 'xlarge', avatar: 160, icon: 100 }
+  ])('maps size $size to the right avatar/icon sizes', ({ size, avatar, icon }) => {
     const wrapper = mount(AuthorAvatar, {
-      props: { name: 'Jane Austen', variant: variant as 'compact' | 'comfortable' | 'full' }
+      props: { name: 'Jane Austen', size: size as 'small' | 'medium' | 'large' | 'xlarge' }
     })
 
     const vAvatar = wrapper.findComponent({ name: 'VAvatar' })

@@ -6,12 +6,12 @@ import { normalizeImagePath } from '@/utils/format-utils'
 interface Props {
   portraitPath?: string | null
   name: string
-  variant?: 'compact' | 'comfortable' | 'full'
+  size?: 'small' | 'medium' | 'large' | 'xlarge'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   portraitPath: null,
-  variant: 'comfortable'
+  size: 'large'
 })
 
 const imgFailed = ref(false)
@@ -23,24 +23,28 @@ watch(
 )
 
 const avatarSize = computed(() => {
-  switch (props.variant) {
-    case 'compact':
-      return AVATAR_SIZES.COMPACT
-    case 'full':
-      return AVATAR_SIZES.FULL
+  switch (props.size) {
+    case 'small':
+      return AVATAR_SIZES.SMALL
+    case 'medium':
+      return AVATAR_SIZES.MEDIUM
+    case 'xlarge':
+      return AVATAR_SIZES.XLARGE
     default:
-      return AVATAR_SIZES.COMFORTABLE
+      return AVATAR_SIZES.LARGE
   }
 })
 
 const iconSize = computed(() => {
-  switch (props.variant) {
-    case 'compact':
-      return ICON_SIZES.COMPACT
-    case 'full':
-      return ICON_SIZES.FULL
+  switch (props.size) {
+    case 'small':
+      return ICON_SIZES.SMALL
+    case 'medium':
+      return ICON_SIZES.MEDIUM
+    case 'xlarge':
+      return ICON_SIZES.XLARGE
     default:
-      return ICON_SIZES.COMFORTABLE
+      return ICON_SIZES.LARGE
   }
 })
 </script>

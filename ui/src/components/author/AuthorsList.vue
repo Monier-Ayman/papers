@@ -37,7 +37,7 @@ const { sentinelRef } = useIntersectionObserver(() => {
       v-for="author in displayedItems"
       :key="author.id"
       :author="author"
-      variant="full"
+      variant="tile"
     />
     <div ref="sentinelRef" class="sentinel" />
   </div>

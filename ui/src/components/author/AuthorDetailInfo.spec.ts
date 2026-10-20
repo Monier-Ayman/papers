@@ -33,13 +33,17 @@ const mountInfo = (author: AuthorDetail, authors: AuthorPreview[] = []) =>
 
 describe('AuthorDetailInfo', () => {
   describe('Enrichment section', () => {
-    it('hides the about section when neither bio nor a webpage resource is available', () => {
+    it('renders an empty about section when neither bio nor a webpage resource is available', () => {
       const wrapper = mountInfo(createAuthor({ bio: null, webpageResource: null }))
 
-      expect(wrapper.find('.author-about').exists()).toBe(false)
+      // The section is kept (empty) so it still occupies its space in the layout
+      const about = wrapper.find('.author-card__about')
+      expect(about.exists()).toBe(true)
+      expect(about.element.children).toHaveLength(0)
+      expect(about.text()).toBe('')
     })
 
-    it('hides the about section when only a portrait is available', () => {
+    it('renders an empty about section when only a portrait is available', () => {
       const wrapper = mountInfo(
         createAuthor({
           bio: null,
@@ -48,15 +52,18 @@ describe('AuthorDetailInfo', () => {
         })
       )
 
-      expect(wrapper.find('.author-about').exists()).toBe(false)
+      const about = wrapper.find('.author-card__about')
+      expect(about.exists()).toBe(true)
+      expect(about.element.children).toHaveLength(0)
+      expect(about.text()).toBe('')
     })
 
     it('renders the biography when bio is available', () => {
       const wrapper = mountInfo(createAuthor({ bio: 'A gifted novelist.' }))
 
-      const about = wrapper.find('.author-about')
+      const about = wrapper.find('.author-card__about')
       expect(about.exists()).toBe(true)
-      expect(wrapper.find('.author-about__bio').text()).toBe('A gifted novelist.')
+      expect(wrapper.find('.author-card__bio').text()).toBe('A gifted novelist.')
     })
 
     it('does not render a standalone portrait in the about section', () => {
@@ -64,9 +71,9 @@ describe('AuthorDetailInfo', () => {
         createAuthor({ bio: 'A gifted novelist.', portraitPath: './authors/austen-jane.webp' })
       )
 
-      expect(wrapper.find('.author-about__portrait').exists()).toBe(false)
-      expect(wrapper.find('.author-about img').exists()).toBe(false)
-      expect(wrapper.find('.author-about__bio').exists()).toBe(true)
+      expect(wrapper.find('.author-card__portrait').exists()).toBe(false)
+      expect(wrapper.find('.author-card__about img').exists()).toBe(false)
+      expect(wrapper.find('.author-card__bio').exists()).toBe(true)
     })
 
     it('renders the source link when a webpage resource is available', () => {
@@ -77,7 +84,7 @@ describe('AuthorDetailInfo', () => {
         })
       )
 
-      const link = wrapper.find('a.author-about__source')
+      const link = wrapper.find('a.author-card__source')
       expect(link.exists()).toBe(true)
       expect(link.attributes('href')).toBe('https://en.wikipedia.org/wiki/Jane_Austen')
       expect(link.attributes('target')).toBe('_blank')
