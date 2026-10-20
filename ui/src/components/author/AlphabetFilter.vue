@@ -35,9 +35,9 @@ const ALL_ITEMS = ['ALL', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ', '0-9']
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  padding: 2.25rem 0;
+  padding-bottom: 2rem;
+  height: 70px;
   gap: 0.25rem;
-  margin-bottom: 1.5rem;
 }
 
 .alphabet-btn {

@@ -126,8 +126,8 @@ onMounted(() => {
 
 <template>
   <div class="home-view">
-    <v-container>
-      <v-row v-if="collectionsLoading">
+    <v-container v-if="collectionsLoading">
+      <v-row>
         <v-col cols="12">
           <loading-spinner :message="t('common.loading')" />
         </v-col>

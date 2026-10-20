@@ -43,7 +43,7 @@ export const LAYOUT = {
   HEADER_HEIGHT: '64px',
   FOOTER_HEIGHT: '136px',
   VIEW_PADDING_HORIZONTAL: '1.6rem',
-  VIEW_PADDING: '2rem 1.6rem',
+  VIEW_PADDING: '4.2rem 1.6rem 2rem 1.6rem',
   VIEW_PADDING_MOBILE: '1.5rem 1.6rem',
   BOOK_CARD_RADIUS: '10px',
   BOOK_CARD_MARGIN: '0.5rem',

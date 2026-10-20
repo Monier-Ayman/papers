@@ -44,7 +44,6 @@ function onDisplayedCount(count: number) {
       :current="displayedRange"
       :total="sortedBooks.length"
       :type="type || 'books'"
-      class="mb-4"
     />
     <books-grid v-if="isGridView" :books="displayedBooks" :columns="columns" :variant="variant" />
     <books-list v-else :books="displayedBooks" @update:displayed-count="onDisplayedCount" />

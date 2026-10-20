@@ -26,6 +26,7 @@ as of 2.0.0.
 - Gutenberg: replace `--with-author-details` with `--with-author-bio` and `--with-author-portrait` (#66)
 - Author details: fetch biographies and portraits in the language the ZIM is built in, resolved through Wikipedia's interlanguage links, and keep the English picture when the localized article has none (#65, #84)
 - Gutenberg: prefer the cover declared by the downloaded EPUB over Project Gutenberg's ~200px `cover.medium.jpg` thumbnail, which yields sharper covers without an extra download; the thumbnail stays as fallback (#68)
+- Fine tune UI display (margins, ...) (#85)
 
 ### Fixed
 

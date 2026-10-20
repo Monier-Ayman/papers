@@ -68,13 +68,14 @@ function goToAuthor(id: string) {
               {{ t('home.mostPopular') }}
             </p>
 
-            <div class="featured-book__cover-wrapper">
+            <button class="featured-book__cover-wrapper" @click="goToBook(mostPopular.id)">
               <book-cover-image
                 :cover-path="mostPopular.coverPath"
                 :alt="t('book.coverAlt', { title: mostPopular.title })"
                 class="featured-book__cover"
+                height="calc(450px - 3rem)"
               />
-            </div>
+            </button>
 
             <button class="featured-book__title-button" @click="goToBook(mostPopular.id)">
               <h3 class="featured-book__title">
@@ -153,13 +154,16 @@ function goToAuthor(id: string) {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.15rem;
   width: 100%;
   aspect-ratio: 2 / 3;
   max-height: 450px;
   flex-shrink: 0;
   align-self: center;
   padding: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .featured-book__cover {

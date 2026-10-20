@@ -47,6 +47,7 @@ const { sentinelRef } = useIntersectionObserver(() => {
 .authors-list {
   display: grid;
   grid-template-columns: repeat(5, 20%);
+  margin-top: -1rem;
 }
 
 @media (max-width: 1200px) {

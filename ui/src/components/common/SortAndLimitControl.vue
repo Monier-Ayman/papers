@@ -153,7 +153,7 @@ if (typeof document !== 'undefined') {
   gap: 0.75rem;
   max-width: v-bind(LAYOUT.MAX_CONTENT_WIDTH);
   margin-inline: auto;
-  padding: 2.25rem 0;
+  padding-bottom: 2rem;
 }
 
 .sort-and-limit--collection-view {

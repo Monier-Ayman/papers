@@ -125,6 +125,7 @@ const collectionDisplayName = computed(() => {
             :cover-path="book.coverPath"
             :alt="t('book.coverAlt', { title: book.title })"
             class="detail-cover"
+            height="240px"
           />
         </div>
       </div>
