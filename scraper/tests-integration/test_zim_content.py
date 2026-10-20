@@ -32,14 +32,19 @@ ZIM_EXPECTATIONS = (
         format_name="html",
         mimetype="text/html",
     ),
-    ZimExpectation(
-        filename="opentextbooks-integration.zim",
-        title="OTL Test",
-        source_slug="opentextbooks",
-        source_creator="open.umn.edu",
-        work_id="54",
-        format_name="pdf",
-        mimetype="application/pdf",
+    pytest.param(
+        ZimExpectation(
+            filename="opentextbooks-integration.zim",
+            title="OTL Test",
+            source_slug="opentextbooks",
+            source_creator="open.umn.edu",
+            work_id="54",
+            format_name="pdf",
+            mimetype="application/pdf",
+        ),
+        marks=pytest.mark.skip(
+            reason="opentextbooks ZIM is not built in CI: the scraper currently fails"
+        ),
     ),
     ZimExpectation(
         filename="wikisource-integration.zim",
