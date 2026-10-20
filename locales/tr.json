@@ -1,0 +1,234 @@
+{
+	"@metadata": {
+		"authors": [
+			"Efygz"
+		]
+	},
+	"language": "Türkçe",
+	"isocode": "tr",
+	"common": {
+		"nav": {
+			"home": "Anasayfa",
+			"about": "Hakkında",
+			"books": "Kitaplar"
+		},
+		"home": {
+			"allCollections": "Tüm derlemler",
+			"popularCollections": "Popüler derlemler"
+		},
+		"book": {
+			"downloads": "indirme",
+			"downloadCount": "İndirme sayısı",
+			"languages": "Dil(ler)",
+			"collection": "Koleksiyon",
+			"published": "Yayın Tarihi",
+			"license": "Lisans",
+			"licensePd": "ABD'de kamu malı.",
+			"licenseCopyright": "Telif hakkı saklıdır. Ayrıntılar için kitabın içindeki telif hakkı bildirimini okuyun.",
+			"fullName": "Tam İsim",
+			"unknown": "Bilinmiyor",
+			"cover": "Kitap Kapağı",
+			"coverLabel": "(kapak)",
+			"anonymous": "Anonim",
+			"various": "Çeşitli",
+			"download": "İndir",
+			"sameCollectionBooks": "Aynı koleksiyondaki kitaplar"
+		},
+		"author": {
+			"wikipediaSource": "Kaynak: Vikipedi"
+		},
+		"collection": {
+			"booksIn": "{collection} içindeki kitaplar"
+		},
+		"zimInfo": {
+			"trigger": "Bu ZIM hakkında bilgi",
+			"title": "Bu ZIM hakkında bilgi",
+			"source": "Kaynak",
+			"collections": {
+				"one": "Koleksiyon",
+				"other": "Koleksiyonlar"
+			},
+			"books": {
+				"one": "Kitap",
+				"other": "Kitaplar"
+			},
+			"language": {
+				"one": "Dil",
+				"other": "Diller"
+			},
+			"formats": {
+				"one": "Biçim",
+				"other": "Biçimler"
+			},
+			"dateScraped": "Oluşturulma tarihi"
+		},
+		"reader": {
+			"close": "Okuyucuyu kapat",
+			"closeTableOfContents": "İçerik tablosunu kapat",
+			"contents": "İçerik",
+			"epub": "EPUB okuyucu",
+			"nextSection": "Sonraki bölüm",
+			"pdf": "PDF okuyucu",
+			"previousSection": "Önceki bölüm",
+			"tableOfContents": "İçerik tablosu",
+			"toggleTableOfContents": "İçerik tablosunu aç/kapat",
+			"unableToOpenEpub": "EPUB dosyası açılamıyor.",
+			"unableToOpenPdf": "PDF dosyası açılamıyor."
+		},
+		"common": {
+			"loading": "Yükleniyor...",
+			"loadingBook": "Kitap bilgileri yükleniyor...",
+			"loadingAuthor": "Yazar bilgileri yükleniyor...",
+			"loadingItems": "{type} yükleniyor...",
+			"of": "/",
+			"sortPopularity": "Popülerlik",
+			"sortTitle": "Başlık",
+			"chooseLanguage": "Bir dil seç...",
+			"mainLanguages": "Ana Diller",
+			"otherLanguages": "Diğer diller",
+			"anyCatalog": "Kataloğu Seçin",
+			"backToTop": "Başa dön",
+			"uiLanguage": "Arayüz dili",
+			"selectInterfaceLanguage": "Arayüz dilini seç",
+			"filterByTitle": "{title} göre filtrele",
+			"gridView": "Izgara görünümü",
+			"listView": "Liste görünümü",
+			"browseAll": "Tümünü Görüntüle",
+			"returnHome": "Ana sayfaya dön",
+			"toggleNavigationMenu": "Gezinme menüsünü aç/kapat",
+			"navigateToItem": "{item} ögesine git",
+			"close": "Kapat",
+			"all": "Tümü",
+			"next": "Sonraki",
+			"previous": "Önceki",
+			"readMore": "Devamını oku",
+			"showMore": "Daha fazla göster",
+			"scrollLeft": "Sola kaydır",
+			"scrollRight": "Sağa kaydır",
+			"showLess": "Daha az göster",
+			"sortAuthor": "Yazar"
+		},
+		"messages": {
+			"noBooks": "Kitap bulunamadı.",
+			"noAuthors": "Yazar bulunamadı.",
+			"noCollections": "Koleksiyon bulunamadı.",
+			"noBooksForAuthor": "Bu yazara ait hiçbir kitap mevcut değil.",
+			"noLanguages": "Kullanılabilir dil yok.",
+			"noFormats": "Kullanılabilir biçim yok.",
+			"notFoundBook": "Kitap bulunamadı. Aradığınız kitap mevcut değil veya kaldırılmış.",
+			"notFoundAuthor": "Yazar bulunamadı. Aradığınız yazar mevcut değil veya kaldırılmış.",
+			"notFoundCollection": "Koleksiyon bulunamadı. Aradığınız koleksiyon mevcut değil veya kaldırılmış.",
+			"noAuthorsForLetter": "{letter} için yazar bulunamadı."
+		},
+		"itemTypes": {
+			"books": "kitap | kitap",
+			"authors": "yazar | yazar"
+		}
+	},
+	"gutenberg": {
+		"about": {
+			"attribution": "Michael S. Hart tarafından 20 Haziran 2004 tarihinde yazılmıştır. 23 Ekim 2004 ve 25 Aralık 2007 tarihlerinde güncellenmiştir.",
+			"introHeading": "Gutenberg Projesi Hakkında",
+			"introParagraph1": "Gutenberg Projesi 75.000'den fazla ücretsiz e-kitaptan oluşan çevrimiçi bir kütüphanedir.",
+			"introParagraph2": "Project Gutenberg'in kurucusu Michael Hart, 1971'de e-kitabı icat etti ve onun anısı, günümüzde e-kitapların ve ilgili içeriklerin oluşturulmasına ilham vermeye devam ediyor.",
+			"introParagraph3": "O zamandan beri binlerce gönüllü dünya çapındaki yayınları dijitalleştirdi ve titizlikle düzeltmelerini yaptı. Project Gutenberg koleksiyonunun tamamı sizin.",
+			"introParagraph4": "Project Gutenberg'in tüm e-kitapları tamamen ücretsizdir ve her zaman da öyle kalacaktır.",
+			"missionAuthor": "Michael Hart’tan",
+			"missionParagraph1": "Project Gutenberg'in misyonu basittir: E-kitapların oluşturulmasını ve dağıtımını teşvik etmek.",
+			"missionParagraph12": "Project Gutenberg'e herkes katkıda bulunmaya davetlidir.",
+			"missionParagraph16": "Project Gutenberg'te herkese yer vardır.",
+			"missionParagraph17": "Herkes kendi e-kitaplarını kendi yöntemleriyle oluşturmakta özgürdür."
+		},
+		"metadata_defaults": {
+			"title": "Project Gutenberg Kütüphanesi"
+		},
+		"nav": {
+			"collections": "Raflar"
+		},
+		"home": {
+			"allCollections": "Tüm raflar",
+			"mostPopular": "En çok indirilenler",
+			"popularCollections": "Popüler raflar"
+		},
+		"collection": {
+			"allCollections": "Tüm raflar"
+		}
+	},
+	"opentextbooks": {
+		"about": {
+			"missionHeading": "Açık eğitim",
+			"missionAuthor": "Açık Derslik Kütüphanesi",
+			"missionParagraph4": "Açık lisanslar, eğitim materyallerinin geniş çapta paylaşılmasına olanak tanırlar.",
+			"missionParagraph5": "Ayrıca, eğitmenlerin kitapları kendi derslerine uyarlamalarını da mümkün kılarlar.",
+			"missionParagraph6": "Uyarlama, ders kitaplarını yerel öğretim ve öğrenme ihtiyaçlarına daha uygun hale getirebilir.",
+			"missionParagraph7": "Açık Ders Kitabı Kütüphanesi bu materyalleri tek bir yerde bir araya getirir.",
+			"missionParagraph8": "Koleksiyonu, çeşitli konularda öğretim ve öğrenmeyi desteklemektedir."
+		},
+		"footer": {
+			"kiwix": "Kiwix"
+		},
+		"book": {
+			"collection": "Konu",
+			"sameCollectionBooks": "Aynı konuda kitaplar"
+		},
+		"collections": {
+			"2": "İşletme",
+			"3": "Bilgisayar Bilimleri",
+			"4": "Sosyal Bilimler - Ekonomi",
+			"5": "Eğitim",
+			"7": "Matematik",
+			"8": "Doğa Bilimleri",
+			"9": "Sosyal Bilimler",
+			"10": "Öğrenci Başarısı",
+			"11": "Hukuk",
+			"13": "Mühendislik ve Teknoloji",
+			"16": "Gazetecilik, Medyasal Çalışmalar ve İletişim",
+			"17": "Tıp",
+			"18": "İşletme - Muhasebe",
+			"19": "İşletme - Finans",
+			"20": "İşletme - İnsan Kaynakları",
+			"21": "İşletme - Yönetim",
+			"22": "İşletme - Pazarlama",
+			"23": "Bilgisayar Bilimleri - Bilgi Sistemleri",
+			"24": "Eğitim - Müfredat ve Öğretim",
+			"26": "Eğitim - Temel Eğitim",
+			"27": "Eğitim - Yüksek Öğretim",
+			"28": "Eğitim - Ortaöğretim",
+			"29": "Beşeri Bilimler - Sanatlar",
+			"30": "Beşeri Bilimler - Tarih",
+			"31": "Beşeri Bilimler - Diller",
+			"32": "Beşeri Bilimler - Dilbilim",
+			"33": "Beşeri Bilimler - Edebiyat, Retorik ve Şiir",
+			"34": "Beşeri Bilimler - Felsefe",
+			"35": "Matematik - Uygulamalı",
+			"36": "Matematik - Saf Matematik",
+			"37": "Doğa Bilimleri - Biyoloji",
+			"38": "Doğa Bilimleri - Kimya",
+			"39": "Doğa Bilimleri - Fizik",
+			"40": "Sosyal Bilimler - Antropoloji",
+			"41": "Sosyal Bilimler - Coğrafya",
+			"42": "Sosyal Bilimler - Psikoloji",
+			"43": "Sosyal Bilimler - Sosyoloji",
+			"47": "Sosyal Bilimler - Cinsiyet ve Cinsellik",
+			"51": "Beşeri Bilimler - Din",
+			"57": "Eğitim - Erken Çocukluk",
+			"59": "Bilgisayar Bilimleri - Programlama Dilleri",
+			"61": "Bilgisayar Bilimleri - Veritabanları",
+			"69": "Tıp - Beslenme",
+			"72": "Tıp - Hemşirelik",
+			"90": "Sosyal Bilimler - Kütüphane Bilimi ve Müze Çalışmaları"
+		},
+		"metadata_defaults": {
+			"title": "Açık Derslik Kütüphanesi",
+			"description": "Ücretsiz, hakemli, açık lisanslı ders kitapları"
+		}
+	},
+	"wikisource": {
+		"about": {
+			"attribution": "Bu metin, ücretsiz kütüphane Vikikaynak tarafından sağlanmıştır.",
+			"introHeading": "Vikikaynak Hakkında",
+			"introParagraph1": "Vikikaynak, herkesin geliştirebileceği ücretsiz bir çevrimiçi kaynak metin kütüphanesidir.",
+			"introParagraph2": "Gönüllüleri kitapların, belgelerin ve diğer yayınlanmış eserlerin yazıya geçirilmesi ve düzeltilmesi işlemlerini gerçekleştirirler."
+		}
+	}
+}

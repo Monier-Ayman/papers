@@ -24,6 +24,12 @@
 			"anonymous": "مجهول",
 			"various": "متنوع"
 		},
+		"zimInfo": {
+			"language": {
+				"one": "اللغة",
+				"other": "اللغات"
+			}
+		},
 		"common": {
 			"loading": "جار التحميل...",
 			"search": "بحث",

@@ -57,10 +57,22 @@
 			"trigger": "Accessible label for the header button that opens the ZIM information dialog",
 			"title": "Title of the dialog showing the filters used to build this ZIM",
 			"source": "Label for the content source field in the ZIM information dialog",
-			"collections": "Label for the collections field in the ZIM information dialog, pluralized on the number of collections listed",
-			"books": "Label for the books field in the ZIM information dialog, pluralized on the number of books listed",
-			"language": "Label for the languages field in the ZIM information dialog, pluralized on the number of languages listed",
-			"formats": "Label for the formats field in the ZIM information dialog, pluralized on the number of formats listed",
+			"collections": {
+				"one": "Label for the collections field in the ZIM information dialog, when a single collection is listed",
+				"other": "Label for the collections field in the ZIM information dialog, when several collections are listed"
+			},
+			"books": {
+				"one": "Label for the books field in the ZIM information dialog, when a single book is listed",
+				"other": "Label for the books field in the ZIM information dialog, when several books are listed"
+			},
+			"language": {
+				"one": "Label for the languages field in the ZIM information dialog, when a single language is listed",
+				"other": "Label for the languages field in the ZIM information dialog, when several languages are listed"
+			},
+			"formats": {
+				"one": "Label for the formats field in the ZIM information dialog, when a single format is listed",
+				"other": "Label for the formats field in the ZIM information dialog, when several formats are listed"
+			},
 			"dateScraped": "Label for the scrape date field in the ZIM information dialog"
 		},
 		"reader": {
