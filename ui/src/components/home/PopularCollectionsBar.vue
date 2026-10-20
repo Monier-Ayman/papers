@@ -76,7 +76,7 @@ function handleSelect(id: string) {
 
 <style scoped>
 .popular-collections-bar {
-  padding: 1.5rem 0;
+  padding-bottom: 1.5rem;
 }
 
 .popular-collections-bar__header {

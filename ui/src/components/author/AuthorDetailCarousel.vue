@@ -6,6 +6,7 @@ import AuthorCard from './AuthorCard.vue'
 import CarouselArrow from '@/components/common/CarouselArrow.vue'
 import { compareAuthorNames } from '@/utils/format-utils'
 import { useDisplay } from 'vuetify'
+import { LAYOUT } from '@/constants/theme.ts'
 
 const { mobile } = useDisplay()
 
@@ -81,51 +82,65 @@ watch(
 
 <template>
   <div class="author-detail-carousel">
-    <div class="carousel-arrow-wrapper carousel-arrow-wrapper--left" v-if="!mobile">
-      <carousel-arrow
-        direction="left"
-        :disabled="!hasPrevious"
-        :ariaLabel="t('common.previous')"
-        @click="shiftLeft"
-      />
-    </div>
-
-    <div class="carousel-track-wrapper">
-      <div ref="trackRef" class="carousel-track" @scroll.passive="updateScrollState">
-        <template v-for="author in sortedAuthors" :key="author.id">
-          <div
-            class="carousel-cell"
-            :class="{ 'carousel-cell--current': author.id === currentAuthor.id }"
-          >
-            <author-card
-              :author="author"
-              :variant="mobile ? 'row' : 'mini'"
-              :navigate="author.id !== currentAuthor.id"
-              :selected="author.id === currentAuthor.id"
-            />
-          </div>
-        </template>
+    <div class="author-detail-carousel--inner">
+      <div class="carousel-arrow-wrapper carousel-arrow-wrapper--left" v-if="!mobile">
+        <carousel-arrow
+          direction="left"
+          :disabled="!hasPrevious"
+          :ariaLabel="t('common.previous')"
+          @click="shiftLeft"
+        />
       </div>
-    </div>
 
-    <div class="carousel-arrow-wrapper carousel-arrow-wrapper--right" v-if="!mobile">
-      <carousel-arrow
-        direction="right"
-        :disabled="!hasNext"
-        :ariaLabel="t('common.next')"
-        @click="shiftRight"
-      />
+      <div class="carousel-track-wrapper">
+        <div ref="trackRef" class="carousel-track" @scroll.passive="updateScrollState">
+          <template v-for="author in sortedAuthors" :key="author.id">
+            <div
+              class="carousel-cell"
+              :class="{ 'carousel-cell--current': author.id === currentAuthor.id }"
+            >
+              <author-card
+                :author="author"
+                :variant="mobile ? 'row' : 'mini'"
+                :navigate="author.id !== currentAuthor.id"
+                :selected="author.id === currentAuthor.id"
+              />
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <div class="carousel-arrow-wrapper carousel-arrow-wrapper--right" v-if="!mobile">
+        <carousel-arrow
+          direction="right"
+          :disabled="!hasNext"
+          :ariaLabel="t('common.next')"
+          @click="shiftRight"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
 .author-detail-carousel {
+  border-top: 0.5px solid rgb(var(--v-theme-grid));
+  background-color: rgb(var(--v-theme-bgd2));
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: -2rem;
+}
+
+.author-detail-carousel--inner {
+  padding: 0 v-bind(LAYOUT.VIEW_PADDING_HORIZONTAL);
+  max-width: v-bind(LAYOUT.MAX_CONTENT_WIDTH);
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .carousel-track-wrapper {

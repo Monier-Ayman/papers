@@ -66,7 +66,7 @@ function shiftRight() {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 3rem 0;
+  padding-bottom: 3rem;
 }
 
 .author-arrow {

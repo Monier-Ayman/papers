@@ -41,10 +41,14 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped>
 .v-img.v-img--fit-content {
   margin-inline: auto;
+  height: fit-content;
+  max-height: none;
+  align-self: center;
 }
 
 :deep(.v-img__img) {
   position: relative;
+  align-self: flex-start;
   width: auto;
   height: auto;
   max-width: 100%;
