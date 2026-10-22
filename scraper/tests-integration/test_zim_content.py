@@ -41,14 +41,19 @@ ZIM_EXPECTATIONS = (
         format_name="pdf",
         mimetype="application/pdf",
     ),
-    ZimExpectation(
-        filename="wikisource-integration.zim",
-        title="Wikisource Test",
-        source_slug="wikisource",
-        source_creator="wikisource.org",
-        work_id="en_tis-sixty-years-since-9cd9266e",
-        format_name="epub",
-        mimetype="application/epub+zip",
+    pytest.param(
+        ZimExpectation(
+            filename="wikisource-integration.zim",
+            title="Wikisource Test",
+            source_slug="wikisource",
+            source_creator="wikisource.org",
+            work_id="en_tis-sixty-years-since-9cd9266e",
+            format_name="epub",
+            mimetype="application/epub+zip",
+        ),
+        marks=pytest.mark.skip(
+            reason="wikisource ZIM is not built in CI: ws-export is unreachable"
+        ),
     ),
 )
 
