@@ -127,18 +127,17 @@ jobs:
             --formats html \
             --no-index \
             --overwrite
-          # opentextbooks is temporarily disabled: the scraper currently fails on it
-          # docker run --rm -v "$PWD/output:/output" papers papers2zim \
-          #   --source opentextbooks \
-          #   --output /output \
-          #   --zim-file /output/opentextbooks-integration.zim \
-          #   --zim-name opentextbooks_integration_test \
-          #   --zim-title "OTL Test" \
-          #   --zim-desc "One Open Textbook Library book for integration testing" \
-          #   --otl-ids 54 \
-          #   --formats pdf \
-          #   --no-index \
-          #   --overwrite
+          docker run --rm -v "$PWD/output:/output" papers papers2zim \
+            --source opentextbooks \
+            --output /output \
+            --zim-file /output/opentextbooks-integration.zim \
+            --zim-name opentextbooks_integration_test \
+            --zim-title "OTL Test" \
+            --zim-desc "One Open Textbook Library book for integration testing" \
+            --otl-ids 54 \
+            --formats pdf \
+            --no-index \
+            --overwrite
           docker run --rm -v "$PWD/output:/output" papers papers2zim \
             --source wikisource \
             --languages en \
@@ -156,9 +155,8 @@ jobs:
         run: |
           docker run --rm -v "$PWD/output:/output" \
             ghcr.io/openzim/zim-tools:3.8.0 zimcheck /output/gutenberg-integration.zim
-          # opentextbooks is temporarily disabled: the scraper currently fails on it
-          # docker run --rm -v "$PWD/output:/output" \
-          #   ghcr.io/openzim/zim-tools:3.8.0 zimcheck /output/opentextbooks-integration.zim
+          docker run --rm -v "$PWD/output:/output" \
+            ghcr.io/openzim/zim-tools:3.8.0 zimcheck /output/opentextbooks-integration.zim
           docker run --rm -v "$PWD/output:/output" \
             ghcr.io/openzim/zim-tools:3.8.0 zimcheck /output/wikisource-integration.zim
 
