@@ -30,6 +30,7 @@
 			"downloadCount": "다운로드 횟수",
 			"languages": "언어",
 			"collection": "모음집",
+			"published": "게시됨",
 			"license": "라이선스",
 			"licensePd": "미국에서는 퍼블릭 도메인입니다.",
 			"licenseCopyright": "저작권 보호 대상입니다. 자세한 내용은 책 안쪽에 있는 저작권 고지를 참조하세요.",
@@ -37,6 +38,7 @@
 			"worksAvailable": "작품 이용 가능",
 			"unknown": "알 수 없음",
 			"cover": "책 표지",
+			"coverAlt": "{title} 표지",
 			"coverLabel": "(커버)",
 			"anonymous": "익명",
 			"various": "여러 가지",
@@ -45,10 +47,38 @@
 		},
 		"author": {
 			"bookCount": "{n}권 | {n}권",
-			"viewAuthor": "저자 보기: {name} ({bookCount})"
+			"viewAuthor": "저자 보기: {name} ({bookCount})",
+			"wikipediaSource": "출처: 위키백과"
 		},
 		"collection": {
 			"allCollections": "모든 모음집"
+		},
+		"zimInfo": {
+			"trigger": "이 ZIM에 대한 정보",
+			"title": "이 ZIM에 대한 정보",
+			"source": "출처",
+			"collections": {
+				"one": "모음집",
+				"other": "모음집"
+			},
+			"books": {
+				"one": "책",
+				"other": "책"
+			},
+			"language": {
+				"one": "언어",
+				"other": "언어"
+			},
+			"formats": {
+				"one": "형식",
+				"other": "형식"
+			}
+		},
+		"reader": {
+			"nextSection": "다음 섹션",
+			"previousSection": "이전 섹션",
+			"unableToOpenEpub": "EPUB를 열 수 없습니다.",
+			"unableToOpenPdf": "PDF를 열 수 없습니다"
 		},
 		"common": {
 			"loading": "불러오는 중...",
@@ -65,6 +95,7 @@
 			"mainLanguages": "기본 언어",
 			"otherLanguages": "다른 언어",
 			"anyCatalog": "카탈로그 선택",
+			"backToTop": "맨 위로 돌아가기",
 			"uiLanguage": "인터페이스 언어",
 			"selectInterfaceLanguage": "인터페이스 언어 선택",
 			"filterBy": "필터 기준",
@@ -81,9 +112,11 @@
 			"navigateTo": "다음으로 이동:",
 			"navigateToItem": "다음으로 이동: {item}",
 			"close": "닫기",
+			"all": "모두",
 			"next": "다음",
 			"previous": "이전",
 			"readMore": "더 보기",
+			"showMore": "더 보기",
 			"scrollLeft": "왼쪽으로 스크롤",
 			"scrollRight": "오른쪽으로 스크롤",
 			"showLess": "덜 보기",
@@ -196,6 +229,22 @@
 			"PS": "미국 문학",
 			"PT": "독일어, 네덜란드어, 플람스어, 아프리카어, 스칸디나비아어, 노르웨이어, 구 아이슬란드어, 구 노르웨이어, 현대 아이슬란드어, 페로어, 덴마크어, 노르웨이어 및 스웨덴어 문학",
 			"PZ": "픽션과 청소년 문학"
+		}
+	},
+	"wikisource": {
+		"home": {
+			"allCollections": "모든 모음집"
+		},
+		"collection": {
+			"allCollections": "모든 모음집"
+		},
+		"book": {
+			"collection": "모음집"
+		},
+		"footer": {
+			"createdBy": "작성자",
+			"packagedBy": "패키지화",
+			"kiwix": "키윅스"
 		}
 	}
 }
