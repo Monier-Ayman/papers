@@ -12,8 +12,8 @@ import { usePlural } from '@/plugins/i18n'
 const ZIM_INFO_TEXT_LIGHT = '#38495c'
 const ZIM_INFO_BGD_DARK = '#38495c'
 const ZIM_INFO_TEXT_DARK = '#ffffff'
-const ZIM_INFO_SCRIM = '#3c485a'
-const ZIM_INFO_SCRIM_DARK = '#121d28'
+const ZIM_INFO_SCRIM = '#3c485acc'
+const ZIM_INFO_SCRIM_DARK = '#121d28cc'
 
 const props = defineProps<{
   modelValue: boolean
@@ -225,5 +225,7 @@ const dateScrapedValue = computed(() => {
 
 :deep(.v-overlay__scrim) {
   opacity: 0.8 !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 </style>
