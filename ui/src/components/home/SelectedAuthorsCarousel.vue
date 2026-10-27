@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
-import { useDisplay, useRtl } from 'vuetify'
+import { useDisplay } from 'vuetify'
 import type { AuthorPreview } from '@/types'
 import AuthorAvatar from '@/components/author/AuthorAvatar.vue'
 import CarouselArrow from '@/components/common/CarouselArrow.vue'
 import SectionHeader from '@/components/common/SectionHeader.vue'
+import { useScrollTrack } from '@/composables/useScrollTrack'
 import { TYPOGRAPHY, LAYOUT } from '@/constants/theme'
 
 defineProps<{
@@ -15,48 +15,12 @@ defineProps<{
 
 const { t } = useI18n()
 const router = useRouter()
-
-const trackRef = ref<HTMLElement | null>(null)
-const hasPrevious = ref(false)
-const hasNext = ref(false)
-
 const { mobile } = useDisplay()
-const { isRtl } = useRtl()
 
-function updateScrollState() {
-  const track = trackRef.value
-  if (!track) return
-  const maxScroll = track.scrollWidth - track.clientWidth
-  const scrollFromStart = isRtl.value ? Math.abs(track.scrollLeft) : track.scrollLeft
-  hasPrevious.value = scrollFromStart > 1
-  hasNext.value = scrollFromStart < maxScroll - 1
-}
-
-function scrollByCard(direction: 1 | -1) {
-  const track = trackRef.value
-  if (!track) return
-  const card = track.querySelector('.selected-authors-carousel__card-wrapper')
-  const cardWidth = card ? card.clientWidth : track.clientWidth / 5
-  const scrollSign = isRtl.value ? -1 : 1
-  track.scrollBy({ left: direction * scrollSign * cardWidth, behavior: 'smooth' })
-}
-
-function shiftPrevious() {
-  scrollByCard(-1)
-}
-
-function shiftNext() {
-  scrollByCard(1)
-}
-
-onMounted(() => {
-  updateScrollState()
-  window.addEventListener('resize', updateScrollState)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('resize', updateScrollState)
-})
+const { trackRef, hasPrevious, hasNext, updateScrollState, shiftPrevious, shiftNext } =
+  useScrollTrack({
+    cellSelector: '.selected-authors-carousel__card-wrapper'
+  })
 
 function goToAuthor(id: string) {
   router.push(`/author/${id}`)
