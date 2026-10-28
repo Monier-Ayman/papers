@@ -11,6 +11,7 @@ import PdfReader from '@/components/reader/PdfReader.vue'
 import { useMainStore } from '@/stores/main'
 import { useDisplay } from 'vuetify'
 import BookCoverImage from '@/components/common/BookCoverImage.vue'
+import BookLicense from '@/components/book/BookLicense.vue'
 
 const { t } = useI18n()
 const { formatLanguages } = useFormatters()
@@ -66,8 +67,6 @@ const cleanDescription = computed(() =>
     ?.replace(/\s*\(This is an automatically generated summary\.\)\s*$/, '')
     .trim()
 )
-
-const cleanLicense = computed(() => props.book.license?.replace(/\.$/, ''))
 
 const shouldTruncateMobile = computed(() => {
   if (!cleanDescription.value) return false
@@ -215,7 +214,7 @@ const collectionDisplayName = computed(() => {
             </v-col>
             <v-col cols="3">
               <div class="inter-13 text-medium-emphasis">{{ t('book.license') }}</div>
-              <div class="inter-13">{{ cleanLicense }}</div>
+              <BookLicense :license="book.license" :license-id="book.licenseId" />
             </v-col>
             <v-col cols="3" v-if="book.primaryCollection">
               <div class="inter-13 text-medium-emphasis">{{ t('book.collection') }}</div>
@@ -243,7 +242,7 @@ const collectionDisplayName = computed(() => {
           </v-col>
           <v-col cols="3">
             <div class="inter-13 text-medium-emphasis">{{ t('book.license') }}</div>
-            <div class="inter-13">{{ cleanLicense }}</div>
+            <BookLicense :license="book.license" :license-id="book.licenseId" />
           </v-col>
           <v-col cols="3" v-if="book.primaryCollection">
             <div class="inter-13 text-medium-emphasis">{{ t('book.collection') }}</div>

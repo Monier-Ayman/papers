@@ -129,7 +129,12 @@ class ExampleMetadata(MetadataPort):
 Normalize source data here:
 
 - language codes expected by core and the UI;
-- human-readable license labels rather than raw source URLs;
+- human-readable license labels rather than raw source URLs. Creative Commons
+  licenses given as a URI, a short code (`CC BY-SA 4.0`) or a name without a
+  version are recognized by `core/licenses.py`: set `Work.license` to whatever
+  the source says and core derives `Work.license_id`, which the UI turns into a
+  localized name and a link. Anything else is shown as given, so write it in
+  full;
 - stable creator and collection IDs;
 - canonical source URLs and valid media types;
 - a meaningful popularity signal, if available.
