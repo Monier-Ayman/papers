@@ -113,8 +113,10 @@ def test_license_url(license_id, expected):
         ),
         (
             "CC-BY-NC-ND-4.0",
-            "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0"
-            " (CC BY-NC-ND 4.0)",
+            (
+                "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0"
+                " (CC BY-NC-ND 4.0)"
+            ),
         ),
         ("CC-BY", "Creative Commons Attribution (CC BY)"),
         ("CC0-1.0", "CC0 1.0 Universal"),
