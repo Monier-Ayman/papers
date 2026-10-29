@@ -415,5 +415,45 @@
 			"packagedBy": "Balené",
 			"kiwix": "Kiwix"
 		}
+	},
+	"onemorelibrary": {
+		"about": {
+			"attribution": "Metadáta kníh a obrázky obálok poskytuje One More Library.",
+			"introHeading": "O knižnici One More Library",
+			"introParagraph1": "One More Library je bezplatná online knižnica voľných diel.",
+			"introParagraph2": "Jej zbierka zahŕňa literatúru, filozofiu, históriu, vedu, náboženstvo a mnoho ďalších oblastí.",
+			"introParagraph3": "Knihy sú dostupné vo viacerých jazykoch a dajú sa čítať online alebo stiahnuť.",
+			"introParagraph4": "Táto knižnica sprístupňuje tieto knihy na čítanie offline.",
+			"missionAuthor": "Komunita One More Library",
+			"missionHeading": "Bezplatné knihy pre každého",
+			"missionParagraph1": "One More Library existuje preto, aby sprístupnila voľné diela každému, v každom jazyku a zadarmo.",
+			"missionParagraph2": "Zbierka je usporiadaná podľa kategórií a jazykov, aby čitatelia mohli objavovať diela z mnohých tradícií.",
+			"missionParagraph3": "Knihy sa ponúkajú v otvorených formátoch, ako sú EPUB a PDF, ktoré fungujú na väčšine zariadení a čítačiek.",
+			"missionParagraph4": "Dostupnosť týchto kníh offline pomáha zachovať ich pre dnešných aj budúcich čitateľov."
+		},
+		"metadata_defaults": {
+			"title": "One More Library",
+			"description": "Bezplatné voľné diela z One More Library"
+		},
+		"nav": {
+			"collections": "Kategórie"
+		},
+		"home": {
+			"allCollections": "Všetky kategórie",
+			"mostPopular": "Najobľúbenejšie",
+			"popularCollections": "Obľúbené kategórie"
+		},
+		"collection": {
+			"allCollections": "Všetky kategórie"
+		},
+		"book": {
+			"collection": "Kategória",
+			"sameCollectionBooks": "Knihy v rovnakej kategórii"
+		},
+		"footer": {
+			"createdBy": "Vytvorila",
+			"packagedBy": "Zabalil",
+			"kiwix": "Kiwix"
+		}
 	}
 }
