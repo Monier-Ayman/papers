@@ -89,3 +89,16 @@ def test_brx_resolves_for_book_53506_languages():
         "eng",
         "brx",
     ]
+
+
+# Regression test for #102
+def test_grc_resolves():
+    books = _make_books([["grc"]])
+    assert get_zim_language_metadata(["grc"], books) == ["grc"]
+
+
+def test_fur_resolves_to_friulian_not_fur_sudanese_language():
+    # "fur" is itself the ISO 639-3 code for Friulian; "fvr" is an unrelated
+    # Sudanese language, so it must not be used here (gutenberg#336/#415)
+    books = _make_books([["fur"]])
+    assert get_zim_language_metadata(["fur"], books) == ["fur"]
