@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import { mdiChevronRight } from '@mdi/js'
+import { computed } from 'vue'
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { TYPOGRAPHY } from '@/constants/theme'
+import { useRtl } from 'vuetify'
 
 defineProps<{
   title: string
@@ -10,6 +12,10 @@ defineProps<{
 defineEmits<{
   action: []
 }>()
+
+const { isRtl } = useRtl()
+
+const chevronIcon = computed(() => (isRtl.value ? mdiChevronLeft : mdiChevronRight))
 </script>
 
 <template>
@@ -20,7 +26,7 @@ defineEmits<{
     <button v-if="actionLabel" class="section-header__action" @click="$emit('action')">
       {{ actionLabel }}
       <svg class="section-header__arrow-icon" viewBox="0 0 24 24">
-        <path :d="mdiChevronRight" />
+        <path :d="chevronIcon" />
       </svg>
     </button>
   </div>
