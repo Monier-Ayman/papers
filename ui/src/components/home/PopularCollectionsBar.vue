@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ClassificationIcon from '@/components/common/ClassificationIcon.vue'
 import SubjectCollectionIcon from '@/components/common/SubjectCollectionIcon.vue'
 import { useMainStore } from '@/stores/main'
 import type { CollectionPreview } from '@/types'
-import { mdiChevronRight } from '@mdi/js'
+import { mdiChevronLeft, mdiChevronRight } from '@mdi/js'
 import { LAYOUT, TYPOGRAPHY } from '@/constants/theme'
+import { useRtl } from 'vuetify'
 
 const { collections, activeId } = defineProps<{
   collections: CollectionPreview[]
@@ -18,6 +20,9 @@ const emit = defineEmits<{
 
 const { t } = useI18n()
 const main = useMainStore()
+const { isRtl } = useRtl()
+
+const chevronIcon = computed(() => (isRtl.value ? mdiChevronLeft : mdiChevronRight))
 
 function displayCollectionName(collection: CollectionPreview) {
   return collection.name && collection.name !== collection.id
@@ -39,7 +44,7 @@ function handleSelect(id: string) {
       <router-link to="/collections" class="popular-collections-bar__all-link">
         {{ t('home.allCollections') }}
         <svg class="popular-collections-bar__arrow" viewBox="0 0 24 24">
-          <path :d="mdiChevronRight" />
+          <path :d="chevronIcon" />
         </svg>
       </router-link>
     </div>
