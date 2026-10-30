@@ -2,6 +2,7 @@ from collections.abc import Sequence
 from typing import Protocol
 
 import babel
+from zimscraperlib.i18n import is_valid_iso_639_3
 
 
 def language_name(code: str) -> str:
@@ -237,16 +238,12 @@ ISO_MATRIX = {
 ISO_MATRIX_REV = {value: key for key, value in ISO_MATRIX.items()}
 
 ZIM_LANGUAGES_MAP: dict[str, list[str]] = {
-    # Bodo: valid ISO 639-3 code with no ISO 639-1 counterpart
-    "brx": ["brx"],
     # no idea how to map `myn` and `nai` in ZIM Language metadata for now
     # do not block if these are parts of another language but refuse to create ZIM
     # if only this language is requested and --zim-lang is not passed
     "myn": [],
     "nai": [],
-    "nah": ["nhe"],
-    "nap": ["nap"],  # Neapolitan: no ISO 639-1 code, already valid ISO 639-3
-    "fur": ["fvr"],  # Friulian: IETF fur maps to ISO 639-3 fvr
+    "nah": ["nhe"],  # Nahuatl: ISO 639-3 macrolanguage code, pick one individual lang
 }
 
 
@@ -258,14 +255,15 @@ class HasLanguages(Protocol):
 
 def resolve_language(lang: str) -> list[str]:
     """Helper to resolve one input language code to ZIM language code(s)."""
-    return [
-        zim_lang
-        for zim_lang in ZIM_LANGUAGES_MAP.get(
-            lang,
-            [ISO_MATRIX.get(lang, lang if lang in ISO_MATRIX_REV else None)],
-        )
-        if zim_lang
-    ]
+    if lang in ZIM_LANGUAGES_MAP:
+        return [zim_lang for zim_lang in ZIM_LANGUAGES_MAP[lang] if zim_lang]
+    if zim_lang := ISO_MATRIX.get(lang):
+        return [zim_lang]
+    # already a valid ISO 639-3 code (e.g. one with no ISO 639-1 counterpart,
+    # like `grc`/Ancient Greek or `nap`/Neapolitan): use it as-is
+    if is_valid_iso_639_3(lang):
+        return [lang]
+    return []
 
 
 def get_zim_language_metadata(
