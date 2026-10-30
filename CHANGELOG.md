@@ -19,6 +19,7 @@ as of 2.0.0.
 - Wikisource: select books by page name with `--wikisource-pages`, stable across feed updates unlike `--books` positions (#73)
 - Cache optimized EPUB and HTML images under an S3 bucket (`--optimization-cache`), keyed by the input image content so Project Gutenberg's frequent file rebuilds no longer defeat the cache (#32)
 - One More Library: add the `onemorelibrary` source (aliases `OML`), scraping public-domain EPUB/PDF books with `--categories` and `--oml-ids` filters (#94)
+- Show Creative Commons licenses as a localized name linking to the license, instead of the raw value of the source (e.g. a bare `http://creativecommons.org/licenses/by-sa/3.0` for Wikisource). The scraper reduces license URIs, short codes and names to an identifier (`licenseId` in the book JSON) shared by all sources (#17)
 
 ### Changed
 

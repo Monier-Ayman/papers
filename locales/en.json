@@ -48,6 +48,16 @@
       "booksIn": "Books in {collection}",
       "allCollections": "All collections"
     },
+    "licenses": {
+      "termBy": "Attribution",
+      "termNc": "NonCommercial",
+      "termNd": "NoDerivatives",
+      "termSa": "ShareAlike",
+      "termSeparator": "-",
+      "ccName": "Creative Commons {terms} {version}",
+      "ccNameUnversioned": "Creative Commons {terms}",
+      "cc0Name": "CC0 1.0 Universal"
+    },
     "zimInfo": {
       "trigger": "Information about this ZIM",
       "title": "Information about this ZIM",
